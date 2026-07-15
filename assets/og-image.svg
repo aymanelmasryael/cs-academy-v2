@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1280" height="640" viewBox="0 0 1280 640">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1220"/>
+      <stop offset="100%" stop-color="#0F1B2E"/>
+    </linearGradient>
+    <linearGradient id="cardBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#111827" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#0F1729" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="accentLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0074FF"/>
+      <stop offset="100%" stop-color="#FFD700"/>
+    </linearGradient>
+    <linearGradient id="glow2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFD700" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#0074FF" stop-opacity="0.03"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="640" fill="url(#bg)"/>
+
+  <!-- Blueprint grid lines -->
+  <g opacity="0.04" stroke="#0074FF" stroke-width="0.5">
+    <line x1="0" y1="0" x2="1280" y2="0" transform="translate(0,40)"/>
+    <line x1="0" y1="0" x2="1280" y2="0" transform="translate(0,80)"/>
+    <line x1="0" y1="0" x2="1280" y2="0" transform="translate(0,120)"/>
+    <line x1="0" y1="0" x2="1280" y2="0" transform="translate(0,160)"/>
+    <line x1="0" y1="0" x2="1280" y2="0" transform="translate(0,200)"/>
+    <line x1="0" y1="0" x2="1280" y2="0" transform="translate(0,240)"/>
+    <line x1="0" y1="0" x2="1280" y2="0" transform="translate(0,280)"/>
+    <line x1="0" y1="0" x2="1280" y2="0" transform="translate(0,320)"/>
+    <line x1="0" y1="0" x2="1280" y2="0" transform="translate(0,360)"/>
+    <line x1="0" y1="0" x2="1280" y2="0" transform="translate(0,400)"/>
+    <line x1="0" y1="0" x2="1280" y2="0" transform="translate(0,440)"/>
+    <line x1="0" y1="0" x2="1280" y2="0" transform="translate(0,480)"/>
+    <line x1="0" y1="0" x2="1280" y2="0" transform="translate(0,520)"/>
+    <line x1="0" y1="0" x2="1280" y2="0" transform="translate(0,560)"/>
+    <line x1="0" y1="0" x2="1280" y2="0" transform="translate(0,600)"/>
+    <line x1="0" y1="0" x2="0" y2="640" transform="translate(80,0)"/>
+    <line x1="0" y1="0" x2="0" y2="640" transform="translate(160,0)"/>
+    <line x1="0" y1="0" x2="0" y2="640" transform="translate(240,0)"/>
+    <line x1="0" y1="0" x2="0" y2="640" transform="translate(320,0)"/>
+    <line x1="0" y1="0" x2="0" y2="640" transform="translate(400,0)"/>
+    <line x1="0" y1="0" x2="0" y2="640" transform="translate(480,0)"/>
+    <line x1="0" y1="0" x2="0" y2="640" transform="translate(560,0)"/>
+    <line x1="0" y1="0" x2="0" y2="640" transform="translate(640,0)"/>
+    <line x1="0" y1="0" x2="0" y2="640" transform="translate(720,0)"/>
+    <line x1="0" y1="0" x2="0" y2="640" transform="translate(800,0)"/>
+    <line x1="0" y1="0" x2="0" y2="640" transform="translate(880,0)"/>
+    <line x1="0" y1="0" x2="0" y2="640" transform="translate(960,0)"/>
+    <line x1="0" y1="0" x2="0" y2="640" transform="translate(1040,0)"/>
+    <line x1="0" y1="0" x2="0" y2="640" transform="translate(1120,0)"/>
+    <line x1="0" y1="0" x2="0" y2="640" transform="translate(1200,0)"/>
+  </g>
+
+  <!-- Blueprint circle (data structure motif) -->
+  <g opacity="0.06" transform="translate(960, 320)">
+    <circle cx="0" cy="0" r="180" fill="none" stroke="#0074FF" stroke-width="1"/>
+    <circle cx="0" cy="0" r="120" fill="none" stroke="#0074FF" stroke-width="0.5"/>
+    <circle cx="0" cy="0" r="60" fill="none" stroke="#0074FF" stroke-width="0.5"/>
+    <line x1="-180" y1="0" x2="180" y2="0" stroke="#0074FF" stroke-width="0.3"/>
+    <line x1="0" y1="-180" x2="0" y2="180" stroke="#0074FF" stroke-width="0.3"/>
+  </g>
+
+  <!-- Binary decoration -->
+  <text x="80" y="80" font-family="'SF Mono', monospace" font-size="10" fill="#0074FF" opacity="0.08">
+    <tspan x="80" dy="0">01100001 01100101 01101100</tspan>
+    <tspan x="80" dy="16">01100011 01110011 01000010</tspan>
+    <tspan x="80" dy="16">01100001 01100011 01100001</tspan>
+    <tspan x="80" dy="16">01100100 01100101 01101101</tspan>
+    <tspan x="80" dy="16">01111001 01000000 01100001</tspan>
+    <tspan x="80" dy="16">01100101 01101100 00101110</tspan>
+    <tspan x="80" dy="16">01100011 01101111 01101101</tspan>
+  </text>
+
+  <!-- Glow -->
+  <ellipse cx="640" cy="320" rx="400" ry="280" fill="url(#glow2)"/>
+
+  <!-- Card -->
+  <rect x="240" y="75" width="800" height="490" rx="16" fill="url(#cardBg)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+  <!-- Accent top bar -->
+  <rect x="240" y="75" width="800" height="3" rx="1.5" fill="url(#accentLine)"/>
+
+  <!-- AEL Logo -->
+  <g transform="translate(490, 115) scale(0.7)">
+    <path d="m97.19,48.59v16.2h-32.4v-16.2c0-8.94-7.25-16.2-16.2-16.2s-16.2,7.25-16.2,16.2v16.2H0v-16.2c0-5.68.98-11.13,2.76-16.2C9.44,13.52,27.44,0,48.59,0s39.16,13.52,45.83,32.4c1.79,5.07,2.76,10.52,2.76,16.2Z" fill="#ffffff"/>
+    <rect y="97.19" width="32.4" height="32.4" fill="#0074FF"/>
+    <rect x="64.79" y="97.19" width="32.4" height="32.4" fill="#0074FF"/>
+    <rect x="64.79" y="129.58" width="32.4" height="32.4" fill="#0074FF"/>
+    <rect y="129.58" width="32.4" height="32.4" fill="#0074FF"/>
+    <rect x="129.58" y="97.19" width="32.4" height="32.4" fill="#FFD700"/>
+    <rect x="161.98" y="129.58" width="32.4" height="32.4" fill="#FFD700"/>
+    <rect x="194.38" y="129.58" width="32.4" height="32.4" fill="#FFD700"/>
+    <rect x="129.58" y="129.58" width="32.4" height="32.4" fill="#FFD700"/>
+    <rect x="129.58" width="32.4" height="32.4" fill="#0074FF"/>
+    <rect x="161.98" width="32.4" height="32.4" fill="#0074FF"/>
+    <rect x="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+    <rect x="129.58" y="32.4" width="32.4" height="32.4" fill="#0074FF"/>
+    <rect y="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+    <rect x="32.4" y="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+    <rect x="64.79" y="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+    <rect x="97.19" y="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+    <rect x="129.58" y="194.38" width="32.4" height="32.4" fill="#FFD700"/>
+    <rect x="161.98" y="194.38" width="32.4" height="32.4" fill="#FFD700"/>
+    <rect x="194.38" y="194.38" width="32.4" height="32.4" fill="#FFD700"/>
+  </g>
+
+  <!-- Title -->
+  <text x="640" y="210" font-family="Helvetica, sans-serif" font-size="34" font-weight="700" fill="#F1F5F9" text-anchor="middle" letter-spacing="-0.5">CS Academy V2 Scaffold</text>
+
+  <!-- Subtitle -->
+  <text x="640" y="252" font-family="Helvetica, sans-serif" font-size="16" fill="#64748B" text-anchor="middle" letter-spacing="0.3">Computer Science Problem Solving — Q&amp;A Engine</text>
+
+  <!-- Divider -->
+  <line x1="440" y1="282" x2="840" y2="282" stroke="url(#accentLine)" stroke-width="1" opacity="0.5"/>
+
+  <!-- Specs row -->
+  <g transform="translate(640, 330)">
+    <rect x="-120" y="-16" width="240" height="32" rx="6" fill="#0074FF" fill-opacity="0.08" stroke="#0074FF" stroke-width="0.5" stroke-opacity="0.2"/>
+    <text x="0" y="6" font-family="'SF Mono', Menlo, monospace" font-size="13" fill="#60A5FA" text-anchor="middle">10,000 records · 20 topics · 50/page</text>
+  </g>
+
+  <!-- Tags -->
+  <g transform="translate(640, 390)">
+    <rect x="-95" y="-14" width="88" height="28" rx="4" fill="#0074FF" fill-opacity="0.1" stroke="#0074FF" stroke-width="0.5" stroke-opacity="0.2"/>
+    <text x="-51" y="6" font-family="'SF Mono', Menlo, monospace" font-size="11" fill="#0074FF" text-anchor="middle">v0.1.0</text>
+    <rect x="7" y="-14" width="88" height="28" rx="4" fill="#FFD700" fill-opacity="0.1" stroke="#FFD700" stroke-width="0.5" stroke-opacity="0.2"/>
+    <text x="51" y="6" font-family="'SF Mono', Menlo, monospace" font-size="11" fill="#FFD700" text-anchor="middle">pre-release</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="640" y="510" font-family="Helvetica, sans-serif" font-size="11" fill="#475569" text-anchor="middle" letter-spacing="1.5">AEL DIGITAL STUDIO</text>
+</svg>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEL CS Academy — V2 Clean Build</title>
+    <link rel="icon" href="ael-logo.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="app-header">
+        <div class="header-content">
+            <img src="ael-logo.svg" alt="AEL Logo" class="ael-logo">
+            <div class="header-titles">
+                <h1><span class="ael-text">AEL CS Academy</span> <span class="bible-text">V2 Clean Architecture</span></h1>
+                <p class="header-subtitle">Computer Science Problem Solving — HTML5, CSS3, Vanilla JS</p>
+            </div>
+        </div>
+        <div class="header-actions">
+            <button id="show-bookmarks-btn" class="nav-btn" aria-label="Show Bookmarks">🔖 Bookmarks (<span id="bookmark-count">0</span>)</button>
+            <div class="header-stats">
+                Database: <span id="stat-total">0</span> Scenarios
+            </div>
+        </div>
+    </header>
+
+    <div class="app-layout">
+        <!-- HTML5 Semantic Aside for Sidebar -->
+        <aside class="sidebar-filters" aria-label="Filters">
+            <h3>Advanced Filters</h3>
+            
+            <div class="filter-group">
+                <label for="search-input">Keyword Search</label>
+                <input type="search" id="search-input" placeholder="Search Data Structures, APIs, etc...">
+            </div>
+
+            <div class="filter-group">
+                <label for="filter-difficulty">Difficulty Level</label>
+                <select id="filter-difficulty">
+                    <option value="All">All Levels</option>
+                    <option value="Beginner">Beginner</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Advanced">Advanced</option>
+                    <option value="Expert">Expert</option>
+                    <option value="Interview">Interview</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="filter-type">Question Type</label>
+                <select id="filter-type">
+                    <option value="All">All Types</option>
+                    <option value="Conceptual">Conceptual</option>
+                    <option value="Practical">Practical</option>
+                    <option value="Architecture">Architecture</option>
+                    <option value="Design Decisions">Design Decisions</option>
+                    <option value="Code Writing">Code Writing</option>
+                    <option value="Debugging">Debugging</option>
+                </select>
+            </div>
+
+            <button id="reset-filters" class="reset-btn" aria-label="Reset all filters">Reset Filters</button>
+        </aside>
+
+        <!-- HTML5 Semantic Main for Content -->
+        <main class="main-container">
+            <header class="content-header">
+                <h2 id="current-view-title">Page <span id="current-page">1</span></h2>
+                <nav class="global-actions" aria-label="Pagination Navigation Top">
+                    <button id="prev-page" class="page-btn">⬅ Prev Page</button>
+                    <button id="next-page" class="page-btn">Next Page ➡</button>
+                </nav>
+            </header>
+
+            <section id="content-area" class="qa-grid" aria-label="Questions Grid">
+                <!-- Injected via Vanilla JS -->
+            </section>
+            
+            <footer class="pagination-footer">
+                <nav aria-label="Pagination Navigation Bottom">
+                    <button id="prev-page-footer" class="page-btn">⬅ Prev Page</button>
+                    <span id="page-info">Page 1</span>
+                    <button id="next-page-footer" class="page-btn">Next Page ➡</button>
+                </nav>
+            </footer>
+        </main>
+    </div>
+
+    <footer class="app-footer">
+        <p>© 2026 Ayman Elmasry — AEL Digital Studio</p>
+        <p class="footer-sub">AEL Vision Framework v2.2 — Semantic HTML5 & CSS3 Grid</p>
+    </footer>
+
+    <!-- Load data first, then logic -->
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

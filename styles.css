@@ -1,0 +1,184 @@
+/* 
+   AEL Vision Framework v2.2 - Pure CSS3 
+   Utilizing CSS Variables, Flexbox, Grid, and Advanced Selectors
+*/
+:root {
+    --bg: #0B1220;
+    --surface: #111827;
+    --surface2: #1E293B;
+    --surface3: #1A2332;
+    --border: #1E3A5F;
+    --border-hover: #0074FF;
+    --text: #E6EEF8;
+    --text-dim: #7B8FA8;
+    --text-muted: #4B5C73;
+    
+    /* AEL Brand Colors */
+    --blue: #0074FF;
+    --gold: #FFD700;
+    --teal: #00FFCC;
+    --purple: #6C47FF;
+    --pink: #FF4D8D;
+    --green: #00FF88;
+    --red: #FF4444;
+
+    /* Spacing & Layout Tokens */
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --border-radius: 8px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+/* Typography Enhancements */
+h1, h2, h3, h4 { margin-bottom: var(--spacing-sm); }
+h4 { text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem; display: flex; align-items: center; gap: var(--spacing-sm); }
+
+/* HTML5 Header */
+.app-header {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(11, 18, 32, 0.85); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: var(--spacing-md) var(--spacing-lg); 
+    display: flex; justify-content: space-between; align-items: center;
+}
+.header-content { display: flex; align-items: center; gap: var(--spacing-md); }
+.ael-logo { width: 48px; height: 48px; }
+.header-titles h1 { font-size: 1.25rem; font-weight: 700; margin-bottom: 2px; }
+.ael-text { color: #FFFFFF; }
+.bible-text { color: var(--green); }
+.header-subtitle { color: rgba(255, 255, 255, 0.7); font-size: 0.85rem; }
+.header-actions { display: flex; gap: var(--spacing-md); align-items: center; }
+
+/* Buttons & Inputs (CSS3 styling) */
+button, input, select { font-family: inherit; }
+.nav-btn, .page-btn {
+    background: var(--surface2); border: 1px solid var(--border); color: var(--text); 
+    padding: var(--spacing-sm) var(--spacing-md); border-radius: 6px; cursor: pointer; transition: 0.2s border-color;
+}
+.nav-btn:hover, .page-btn:hover:not(:disabled) { border-color: var(--blue); }
+.page-btn:disabled { opacity: 0.5; cursor: not-allowed; border-color: var(--border); }
+.header-stats { font-size: 0.85rem; color: var(--text-dim); background: var(--surface2); padding: 6px 12px; border-radius: 6px; border: 1px solid var(--border); }
+
+/* Layout Grid/Flex */
+.app-layout { 
+    display: flex; max-width: 1400px; margin: 0 auto; 
+    min-height: calc(100vh - 150px); align-items: stretch;
+}
+
+/* Aside Filters */
+.sidebar-filters { 
+    width: 280px; background: var(--surface); border-right: 1px solid var(--border); 
+    padding: var(--spacing-lg); flex-shrink: 0; 
+}
+.filter-group { margin-bottom: var(--spacing-lg); }
+.filter-group label { display: block; color: var(--text-dim); font-size: 0.85rem; margin-bottom: var(--spacing-sm); font-weight: 600; }
+.filter-group input, .filter-group select {
+    width: 100%; background: var(--surface2); border: 1px solid var(--border); color: var(--text);
+    padding: 10px; border-radius: 6px; font-size: 0.9rem;
+    transition: 0.2s border-color, 0.2s box-shadow;
+}
+.filter-group input:focus, .filter-group select:focus { 
+    outline: none; border-color: var(--blue); 
+    box-shadow: 0 0 0 3px rgba(0, 116, 255, 0.15); 
+}
+.reset-btn { width: 100%; background: none; border: 1px solid var(--red); color: var(--red); padding: 10px; border-radius: 6px; cursor: pointer; transition: 0.2s all; }
+.reset-btn:hover { background: rgba(255,68,68,0.1); }
+
+/* Main Content Area */
+.main-container { flex: 1; padding: var(--spacing-xl) 48px; display: flex; flex-direction: column; }
+.content-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--spacing-xl); border-bottom: 1px solid var(--border); padding-bottom: var(--spacing-md); }
+.pagination-footer { margin-top: auto; padding-top: var(--spacing-lg); border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+
+/* CSS3 Grid for Q&A Cards */
+.qa-grid { display: flex; flex-direction: column; gap: var(--spacing-lg); }
+.qa-card { 
+    background: var(--surface); border: 1px solid var(--border); 
+    border-radius: var(--border-radius); overflow: hidden; 
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease; 
+}
+.qa-card:hover { border-color: var(--border-hover); transform: translateY(-1px); box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+.qa-card.highlight { border-color: var(--gold); box-shadow: 0 0 15px rgba(255,215,0,0.2); }
+
+.qa-header { 
+    padding: 20px; cursor: pointer; display: flex; justify-content: space-between; 
+    align-items: flex-start; gap: var(--spacing-md); background: var(--surface2); 
+}
+.qa-header:hover { background: var(--surface3); }
+.qa-title-wrapper { flex: 1; }
+.qa-question { font-size: 1.15rem; font-weight: 600; color: var(--text); margin-bottom: 12px; }
+
+/* Tags using Flexbox */
+.qa-meta-tags { display: flex; gap: var(--spacing-sm); flex-wrap: wrap; }
+.meta-tag { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.7rem; padding: 2px 6px; border-radius: 4px; font-weight: 700; }
+.meta-diff { background: rgba(0,116,255,0.15); color: var(--blue); }
+.meta-type { background: rgba(108,71,255,0.15); color: var(--purple); }
+.meta-time { background: rgba(255,215,0,0.12); color: var(--gold); }
+
+/* Action Buttons */
+.qa-actions { display: flex; gap: var(--spacing-sm); }
+.action-btn { 
+    background: none; border: 1px solid var(--border); color: var(--text-dim); 
+    padding: 6px; border-radius: 4px; cursor: pointer; font-size: 0.9rem; transition: 0.2s; 
+}
+.action-btn:hover { color: var(--text); border-color: var(--text); }
+.action-btn.active-bookmark { color: var(--gold); border-color: var(--gold); background: rgba(255,215,0,0.1); }
+
+/* CSS3 Expand/Collapse Animation Logic */
+.qa-body { 
+    padding: var(--spacing-xl); display: none; border-top: 1px solid var(--border); 
+    animation: fadeIn 0.3s ease-out;
+}
+.qa-card.expanded .qa-body { display: block; }
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* CSS3 Grid for interior sections */
+.qa-section-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-lg); margin-bottom: var(--spacing-lg); }
+.qa-section { margin-bottom: var(--spacing-lg); }
+.qa-section:last-child { margin-bottom: 0; }
+.qa-section-grid .qa-section { margin-bottom: 0; }
+
+/* Semantic Colors mapping to HTML tags via CSS nesting equivalent approach */
+.s-answer h4 { color: var(--green); }
+.s-correct h4 { color: var(--blue); }
+.s-incorrect h4 { color: var(--red); }
+.s-example h4 { color: var(--teal); }
+.s-mistakes h4 { color: var(--red); }
+.s-best h4 { color: var(--gold); }
+.s-concepts h4 { color: var(--purple); }
+.s-rels h4 { color: var(--pink); }
+
+.qa-section p, .qa-section ul { color: var(--text); font-size: 0.95rem; }
+.qa-section ul { margin-left: 20px; }
+.qa-section .code-box { 
+    background: rgba(0,0,0,0.3); padding: var(--spacing-md); border-radius: 6px; 
+    font-family: 'Fira Code', 'Cascadia Code', monospace; font-size: 0.85rem; 
+    color: var(--blue); margin-top: var(--spacing-sm); white-space: pre-wrap; 
+    border: 1px solid rgba(0, 116, 255, 0.2); 
+}
+.qa-section .rel-box { background: var(--surface2); padding: 12px; border-radius: 6px; font-size: 0.85rem; color: var(--text-dim); }
+.qa-section .rel-box strong { color: var(--text); }
+
+/* HTML5 Footer */
+.app-footer { text-align: center; padding: 40px var(--spacing-lg); border-top: 1px solid var(--border); color: var(--text-dim); font-size: 0.85rem; background: var(--bg); margin-top: 40px; }
+.footer-sub { color: var(--text-muted); font-size: 0.75rem; margin-top: 8px; }
+
+/* CSS3 Media Queries */
+@media (max-width: 900px) {
+    .app-layout { flex-direction: column; }
+    .sidebar-filters { width: 100%; border-right: none; border-bottom: 1px solid var(--border); }
+    .main-container { padding: var(--spacing-lg); }
+}
