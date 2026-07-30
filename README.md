@@ -6,6 +6,15 @@
 
 An interactive, zero-dependency Q&A browser for computer science problem-solving topics. Built with vanilla HTML5, CSS3, and JavaScript (ES6 class-based engine).
 
+## 📚 Learning Metadata
+
+| | |
+|---|---|
+| **Learning Level** | Beginner → Intermediate (Pre-release scaffold) |
+| **Estimated Duration** | Self-paced (10,000 Q&A cards) |
+| **Prerequisites** | Basic computer science concepts |
+| **Learning Outcomes** | Practice CS problem-solving with 10,000 Q&A cards, filter by difficulty and type, track progress with bookmarks |
+
 ---
 
 ## Overview
