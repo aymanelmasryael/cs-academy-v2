@@ -96,6 +96,14 @@ This will overwrite `data.js`. The script uses CommonJS `require('fs')` and runs
 
 ---
 
+## 🔗 Related Resources
+
+- [AEL Learning Catalog](https://github.com/aymanelmasryael/ael-learning-catalog) — Central entry point to all AEL courses
+- [CS50 Companion](https://github.com/aymanelmasryael/AEL-Sovereign-CS50x-2026-2027) — Harvard CS50x master citadel with exams, IDE, and AI prompt engineering
+- [Problem Solving Academy](https://github.com/aymanelmasryael/problem-solving-academy) — 256 problem-solving modules for C# and Unity
+
+---
+
 ## License
 
 MIT — see [LICENSE](./LICENSE).
